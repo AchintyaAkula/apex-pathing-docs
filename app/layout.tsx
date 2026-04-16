@@ -44,14 +44,15 @@ export default async function RootLayout({
         {/* Your additional tags should be passed as `children` of `<Head>` element */}
       </Head>
       <body>
-        <Layout
+       <Layout
           banner={PageBanner()}
           navbar={PageNavbar()}
           pageMap={await getPageMap()}
           docsRepositoryBase="https://github.com/ApexPathing/main.git"
           footer={PageFooter()}
+          editLink={null}                    // ← add this
+          feedback={{ content: null }}       // ← add this
         >
-          
           {children}
         </Layout>
       </body>
